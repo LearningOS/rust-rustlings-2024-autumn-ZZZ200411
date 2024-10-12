@@ -8,9 +8,8 @@
 // Execute `rustlings hint lifetimes1` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
-fn longest(x: &str, y: &str) -> &str {
+fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() {
         x
     } else {
@@ -19,9 +18,10 @@ fn longest(x: &str, y: &str) -> &str {
 }
 
 fn main() {
-    let string1 = String::from("abcd");
+    let string1 = String::from("abcd"); 
     let string2 = "xyz";
 
-    let result = longest(string1.as_str(), string2);
+    let result = longest(string1.as_str(), string2); //as_str就是把string转换成&str
+    //对于这里的result ， 编译器只知道他是依赖与string1 或者 string2 ， 不知道他的 生命周期
     println!("The longest string is '{}'", result);
 }
