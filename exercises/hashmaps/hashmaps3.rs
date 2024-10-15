@@ -14,7 +14,7 @@
 // Execute `rustlings hint hashmaps3` or use the `hint` watch subcommand for a
 // hint.
 
-use std::collections::HashMap;
+use std::collections::HashMap;//use std::collections::HashMap 引入哈希表
 
 // A structure to store the goal details of a team.
 struct Team {

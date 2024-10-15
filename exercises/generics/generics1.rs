@@ -5,8 +5,7 @@
 //
 // Execute `rustlings hint generics1` or use the `hint` watch subcommand for a
 // hint.
-let j = 3;
-let a = 3;
+
 
 
 fn main() {

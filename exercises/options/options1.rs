@@ -40,8 +40,8 @@ mod tests {
     fn raw_value() {
         // TODO: Fix this test. How do you get at the value contained in the
         // Option?
-        let icecreams = maybe_icecream(12);
-        let icecreams = icecreams.unwrap();
+        let icecreams = maybe_icecream(12);//得到一个some（5）
+        let icecreams = icecreams.unwrap();//.unwrap ->变成5
           assert_eq!(icecreams, 5);
         
         
